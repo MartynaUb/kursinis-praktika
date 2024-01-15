@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.h_da.fbi.nzse.thediaryapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheDiaryApp"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.entry.ViewActivity" android:label="Eintrag Overview"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.entry.NewNoteActivity" android:label="Neuer Eintrag"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.entry.action.NewActivity" android:label="Neuer Eintrag" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.entry.NewActivity" android:label="Neuer Eintrag" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.home.HomeScreenActivity" android:label="Home"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.home.SettingsActivity" android:label="Einstellungen"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.achievements.Activity" android:label="Achievements" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.tutorial.HomeEntryActivity" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.tutorial.HomeAchievementActivity" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.tutorial.HomePlusActivity" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.tutorial.Activity" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.home.NameActivity" android:noHistory="true" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.welcome.DActivity" android:parentActivityName="de.h_da.fbi.nzse.thediaryappv2.welcome.CActivity"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.welcome.CActivity" android:parentActivityName="de.h_da.fbi.nzse.thediaryappv2.welcome.BActivity"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.welcome.BActivity" android:parentActivityName="de.h_da.fbi.nzse.thediaryappv2.welcome.AActivity"/>
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.welcome.AActivity" android:parentActivityName="de.h_da.fbi.nzse.thediaryappv2.home.Activity" />
+        <activity android:name="de.h_da.fbi.nzse.thediaryappv2.home.Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="de.h_da.fbi.nzse.thediaryappv2.notifications.ReminderBroadcastAPI"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
